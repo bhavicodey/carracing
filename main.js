@@ -70,22 +70,123 @@ function my_keydown(e)
 		if(keyPressed == '87')
 		{
 			car2_up();
-			console.log("key w");
+			console.log("key W");
 		}
 		if(keyPressed == '83')
 		{
 			car2_down();
-			console.log("key s");
+			console.log("key S");
 		}
 		if(keyPressed == '65')
 		{
 			car2_left();
-			console.log("key a");
+			console.log("key A");
 		}
 		if(keyPressed == '68')
 		{
 			car2_right();
-			console.log("key d");
+			console.log("key D");
 		}
+
+	if(car1_x > 700)
+	{
+		console.log("car1");
+		document.getElementById('game_status').innerHTML = "Car 1 Won!!";
+	}
+	else if(car2_x > 700)
+	{
+		console.log("car2");
+		document.getElementById('game_status').innerHTML = "Car 2 Won!!";
+	}
 }
 
+
+function car1_up()
+{
+	if(car1_y >=0)
+	{
+		car1_y = car1_y - 10;
+		console.log("When up arrow is pressed,  x = " + car1_x + " | y = " +car1_y);
+		 uploadBackground();
+		 uploadcar1();
+		 uploadcar2();
+	}
+}
+function car1_down()
+{
+	if(car1_y <=500)
+	{
+		car1_y =car1_y+ 10;
+		console.log("When down arrow is pressed,  x = " + car1_x + " | y = " +car1_y);
+		uploadBackground();
+		 uploadcar1();
+		 uploadcar2();
+	}
+}
+function car1_left()
+{
+	if(car1_x >= 0)
+	{
+		car1_x =car1_x - 10;
+		console.log("When left arrow is pressed,  x = " + car1_x + " | y = " +car1_y);
+		uploadBackground();
+		 uploadcar1();
+		 uploadcar2();
+	}
+}
+function car1_right()
+{
+	if(car1_x <= 700)
+	{
+		car1_x =car1_x + 10;
+		console.log("When right arrow is pressed,  x = " + car1_x + " | y = " +car1_y);
+		uploadBackground();
+		uploadcar1();
+		 uploadcar2();
+   }
+}
+	
+function car2_up()
+{
+	if(car2_y >=0)
+	{
+		car2_y = car2_y - 10;
+		console.log("When up arrow is pressed,  x = " + car2_x + " | y = " +car2_y);
+		 uploadBackground();
+		 uploadcar1();
+		 uploadcar2();
+	}
+}
+function car2_down()
+{
+	if(car1_y <=500)
+	{
+		car2_y =car2_y+ 10;
+		console.log("When down arrow is pressed,  x = " + car2_x + " | y = " +car2_y);
+		uploadBackground();
+		 uploadcar1();
+		 uploadcar2();
+	}
+}
+function car2_left()
+{
+	if(car2_x >= 0)
+	{
+		car2_x =car2_x - 10;
+		console.log("When left arrow is pressed,  x = " + car2_x + " | y = " +car2_y);
+		uploadBackground();
+		 uploadcar1();
+		 uploadcar2();
+	}
+}
+function car2_right()
+{
+	if(car2_x <= 700)
+	{
+		car2_x =car2_x + 10;
+		console.log("When right arrow is pressed,  x = " + car2_x + " | y = " +car2_y);
+		uploadBackground();
+		uploadcar1();
+		 uploadcar2();
+   }
+}
